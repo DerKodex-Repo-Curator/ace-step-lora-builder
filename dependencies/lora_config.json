@@ -1,0 +1,6 @@
+{
+  "r": 32,
+  "lora_alpha": 32,
+  "target_modules": ["speaker_embedder", "to_q", "to_k", "to_v", "to_out.0"],
+  "use_rslora": true
+}

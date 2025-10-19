@@ -1,0 +1,15 @@
+---
+description: Bash Scripting and Support Function Standards
+globs:
+  - **/*.sh
+alwaysApply: true
+---
+
+- Bash Scripting & Support Functions Standards
+    - All Bash scripts must begin with the shebang #!/usr/bin/env bash and include the robust set command: set -euo pipefail to ensure immediate exit on errors, failure for unset variables, and proper pipe failure handling
+    - All mission-critical commands must include a check for a successful exit status ($?) or use || exit 1
+    - Scripts should provide clear, actionable logging messages (e.g., using echo with distinct prefixes) rather than silent execution
+    - You must strictly enforce the use of double quotes around all variable expansions (e.g., "$my_variable") to prevent word splitting and globbing issues
+    - Prefer standard POSIX utilities (e.g., awk, sed) and avoid using non-standard Bash extensions where possible
+    - Scripts must be clear and include comments explaining complex logic or unusual syntax
+    - Bash scripts are exclusively for support functions (e.g., deployment, cleanup, lifecycle management) and you must challenge any attempt to use Bash for business logic that should reside in an application layer

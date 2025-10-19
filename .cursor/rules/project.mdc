@@ -1,0 +1,11 @@
+---
+description: An overview of this project and it's file structure
+alwaysApply: true
+---
+
+- A set of Python scripts that support the generation of, and training of LoRAs for GenAI
+
+- All code is written in Python
+- All Python code is stored in src
+
+- The root folder contains the isolated pyenv environment used for running all scripts

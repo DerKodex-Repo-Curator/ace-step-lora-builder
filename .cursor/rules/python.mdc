@@ -1,0 +1,49 @@
+---
+description: Python coding standards and development rules
+globs:
+  - **/*.py
+alwaysApply: true
+---
+
+- For the Python environment
+    - The version used is specified in .python-version
+    - Pyenv is used for all Python environment management
+
+- Use type hints consistently across all types and function returns
+- Use lazy formatting for all strings where possible
+- Avoid unnecessary else statements; use the if-return pattern instead
+- Avoid hard-coded values, pull out fixed values to the top of the file as scoped final variables
+- Never use local imports, always import them at the top of the file
+
+- For shared libraries
+    - Ensure you indicate public and non-public methods using _ at the start of method names
+    - Expose default imports using __all__ = []
+
+- Any doc strings (function, method, module etc.)
+    - Should start and end with a space and for single sentence comments they do not have a full stop
+    - Should be simple and should not document types, arguments, return types etc
+
+- Use lowercase with underscores for directories and files (e.g., routers/user_routes.py).
+
+- For error handling
+    - Place the happy path last in the function for improved readability
+    - Implement proper error logging and user-friendly error messages
+    - Do not use generic exceptions and be specific on the error, creating new exception classes if needed
+    - Never use warnings.filterwarnings unless I explicitly ask you to
+
+- Follow PEP8 conventions for all code written - https://peps.python.org/pep-0008
+- Prefer iteration and modularization over code duplication
+- Follow DRY (Don’t Repeat Yourself) and KISS (Keep It Simple, Stupid) principles
+
+- Formatter: autopep8
+- Linter: pylint
+
+
+
+
+
+
+
+
+
+

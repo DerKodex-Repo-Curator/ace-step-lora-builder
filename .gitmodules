@@ -1,0 +1,3 @@
+[submodule "dependencies/ace-step"]
+	path = dependencies/ace-step
+	url = git@github.com:leewinder/ACE-Step.git

@@ -1,0 +1,18 @@
+{
+  "train_lora": {
+    "lora_config_path": "dependencies/lora_config.json",
+    "max_steps": 5000,
+    "exp_name": "<lora_model_name>",
+    "checkpoint_generation_period": 10000,
+    "plot_generation_period": 5000,
+    "save_historical_checkpoints": 1
+  },
+  "generate_audio_tags": {
+    "gemini_api_key": "<Your Gemini API key here>",
+    "gemini_prompt": "Analyze this audio clip and provide a concise, clean, comma-separated list of up to 5 descriptive keywords (tags).  Do not include any introductory or concluding text, just the tags",
+    "model": "gemini-2.5-flash"
+  },
+  "create_audio_samples": {
+    "sample_duration_ms": 10000
+  }
+}
